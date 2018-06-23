@@ -156,7 +156,7 @@ class Parser
 
                     if ((string)$tag['description']) {
                         $nArgument['description'] = (string)$tag['description'];
-                        $nArgument['description'] = preg_replace('/^<p>(.+)<\/p>$/', '$1', $nArgument['description']);
+                        $nArgument['description'] = preg_replace('/^<p>(.+)<\/p>$/s', '$1', $nArgument['description']);
                     }
 
                     if ((string)$tag['variable']) {
