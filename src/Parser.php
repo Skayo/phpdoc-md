@@ -127,6 +127,8 @@ class Parser
 
             $return = $method->xpath('docblock/tag[@name="return"]');
 
+            $returnDescription = isset($return[0]['description']) ? $return[0]['description'] : false;
+
             if (count($return)) {
                 $return = (string)$return[0]['type'];
             } else {
@@ -186,6 +188,8 @@ class Parser
                 'signature'   => $signature,
                 'arguments'   => $arguments,
                 'definedBy'   => $className,
+                'returnType'  => $return,
+                'returnDesc'  => $returnDescription,
             ];
         }
 
