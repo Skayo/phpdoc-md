@@ -21,13 +21,19 @@ Simply add:
 
     "require-dev" : {
 
-        "evert/phpdoc-md" : "~0.2.0"
+        "skayo/phpdoc-md" : "~0.2.0"
 
     }
 
 To your composer.json, and then you can simply install with:
 
     composer install
+    
+But I recommend to just install it globally with this command:
+
+    composer global require skayo/phpdoc-md
+
+This ensures that you can use the ``phpdocmd`` command everywhere on your computer.
 
 
 Usage
